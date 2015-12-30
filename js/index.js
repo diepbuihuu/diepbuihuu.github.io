@@ -10,7 +10,7 @@ $(document).ready(function () {
                 // TODO: Send the subscription subscription.endpoint
                 // to your server and save it to send a push message
                 // at a later date
-                //return sendSubscriptionToServer(subscription);
+                return sendSubscriptionToServer(subscription);
                 return true;
             });
         }).catch(function (err) {
