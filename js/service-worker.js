@@ -1,5 +1,4 @@
 self.addEventListener('push', function(event) {  
-	debugger;
   console.log('Received a push message', event);
 
   var title = 'Notification';  
