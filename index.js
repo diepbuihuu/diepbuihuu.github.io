@@ -51,7 +51,7 @@
               // In this example we are using a Realtime application key without any security
               // so you should replace it with your own appkey and follow the guidelines
               // to configure it
-              client.connect('B2N59F', 'myAuthenticationToken');
+              client.connect('socialivo', 'AIzaSyCT85qkQdf7J1ZHsSDvFzChrV74uGCtyT8');
            }
          }
       });
