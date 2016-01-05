@@ -1,5 +1,6 @@
 
 var ChromePushManager = function(serviceWorkerPath, callback){
+    console.log('xxx');
 	if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register(serviceWorkerPath)
 		.then(ChromePushManager.initialiseState(callback))
