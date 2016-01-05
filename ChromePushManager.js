@@ -2,7 +2,8 @@
 var ChromePushManager = function(serviceWorkerPath, callback){
 	if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register(serviceWorkerPath)
-		.then(ChromePushManager.initialiseState(callback));
+		.then(ChromePushManager.initialiseState(callback))
+                .catch(function(error) {console.log(error);});
 	} else {
 		callback('Service workers aren\'t supported in this browser.', null);
 	}
