@@ -32,7 +32,7 @@ $(document).ready(function () {
         });
     }
     
-    wrapper = sendMessage({action: 'send guid', guid: 'xxxxxxxxxxxxxxxxx'});
+    wrapper = sendMessage({action: 'send guid', guid: 'yyyyyyyyyyyyyyyyyy'});
     wrapper.then(function(value) {
         console.log(value);
     }, function (err) {
