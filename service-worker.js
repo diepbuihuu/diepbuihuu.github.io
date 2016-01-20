@@ -1,7 +1,9 @@
+var guid = '';
+
 self.addEventListener('push', function(event) {  
   console.log('Received a push message', event);
 
-  var title = event.title;  
+  var title = event.title + guid;  
   var body = event.body;  
   var icon = 'https://raw.githubusercontent.com/deanhume/typography/gh-pages/icons/typography.png';  
   var tag = 'socialivo';
@@ -14,6 +16,13 @@ self.addEventListener('push', function(event) {
      })  
    );  
 });
+
+self.addEventListener('message', function (evt) {
+  console.log('postMessage received', evt.data);
+  if (evt.data.action === 'send guid') {
+      guid = evt.data.guid;
+  }
+})
 
 self.addEventListener('notificationclick', function(event) {  
   console.log('On notification click: ', event.notification.tag);  
