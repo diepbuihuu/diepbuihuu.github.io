@@ -22,6 +22,7 @@ self.addEventListener('message', function (evt) {
   if (evt.data.action === 'send guid') {
       guid = evt.data.guid;
   }
+  event.ports[0].postMessage({'test': 'This is my response.'});
 })
 
 self.addEventListener('notificationclick', function(event) {  
