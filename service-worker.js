@@ -5,7 +5,7 @@ self.addEventListener('push', function (event) {
 
     event.waitUntil(
         fetch('https://diepbuihuu.github.io/data.json').then(function (response) {
-            console.log(response);
+            console.log(response.json());
             try {
                 var data = JSON.parse(response);
                 var title = data.title || 'New notification';
