@@ -5,9 +5,8 @@ self.addEventListener('push', function (event) {
 
     event.waitUntil(
         fetch('https://diepbuihuu.github.io/data.json').then(function (response) {
-            console.log(response.json());
-            try {
-                var data = JSON.parse(response);
+            return response.json().then(function(data) {  
+
                 var title = data.title || 'New notification';
                 var body = data.body || 'There is newly updated content available on the site. Click to see more.';
                 meetId = data.meetId || '';
@@ -18,9 +17,8 @@ self.addEventListener('push', function (event) {
                     icon: icon,  
                     tag: tag  
                 });
-            } catch (e) {
-                console.log(e);
-            }
+            });  
+            
         }).catch(function (err) {
             self.registration.showNotification('New notification', {
                 body: 'There is newly updated content available on the site. Click to see more.',
