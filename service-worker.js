@@ -4,7 +4,7 @@ var meetId = '';
 self.addEventListener('push', function (event) {
 
     event.waitUntil(
-        fetch('https://localhost:8081/getLastNotification?guid=' + guid).then(function (response) {
+        fetch('https://diepbuihuu.github.io/data.json').then(function (response) {
             try {
                 var data = JSON.parse(response);
                 var title = data.title || 'New notification';
