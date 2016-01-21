@@ -32,7 +32,7 @@ $(document).ready(function () {
         });
     }
     
-    wrapper = sendMessage({action: 'send guid', guid: 'yyyyyyyyyyyyyyyyyy'});
+    wrapper = sendMessage({action: 'send guid', guid: '5463b690-e00f-4f92-a8ba-88591c3265cd'});
     wrapper.then(function(value) {
         console.log(value);
     }, function (err) {
